@@ -15,8 +15,7 @@ To replicate the environment and run the project, the following software and too
     - XRT is crucial for configuring and managing the FPGA.
 
 3. **Samsung SmartSSD FPGA Shell**:
-    - Download the Samsung SmartSSD FPGA Shell from the [Samsung official website](https://www.samsung.com/semiconductor/minisite/ssd/product/smart/ssd/).
-    - Follow the installation instructions provided in the download package.
+    - Follow the Samsung SmartSSD FPGA Shell install procedure found in [Xilinx's SmartSSD Documentation](https://www.xilinx.com/content/dam/xilinx/support/documents/boards_and_kits/accelerator-cards/1_3/ug1382-smartssd-csd.pdf).
 
 ## Replication:
     1. Open the Vivado/Vitis project provided in the project repository.
