@@ -1,4 +1,4 @@
-# DDR4 Capacitor Discharge
+# DDR4 FPGA Characterization
 
 ## Abstract
 This project involves the creation and implementation of an FPGA-accelerated application utilizing a Samsung SmartSSD. The project aims to harness the computational power of the on-board FPGA to accelerate specific data processing tasks, thereby significantly reducing the data processing time and offloading the workload from the host system. The development environment used for this project is Xilinx Vivado/Vitis and the FPGA configuration is done using the Xilinx Runtime (XRT) along with the Samsung SmartSSD FPGA Shell.
