@@ -26,14 +26,18 @@ To replicate the environment and run the project, the following software and too
 ## Quick Guide:
 1. Clone the repository.
 ```bash
-git clone l
+git clone https://github.com/edro360/ddr4_fpga_characterization.git
 ```
 
 2. Navigate to krnl_dummy to build the bitstream
     - The outputs can be found in the `xclbin/` and `xo/` folders but if you'd like to build them yourself then enter the following into the terminal.
 ```bash
 cd krnl_dummy
+```
+```bash
 make xo
+```
+```bash
 make xclbin
 ```
 
