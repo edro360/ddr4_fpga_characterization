@@ -1,0 +1,235 @@
+<ENTRY>
+{
+ "thisFile": "/home/owner/Desktop/dram_rw/krnl_dram_rw/xo/krnl_dram_rw.xo.compile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Sun Dec 10 16:26:39 2023",
+ "timestampMillis": "1702254399978",
+ "buildStep": {
+  "cmdId": "29169b54-7839-45b3-aaee-59bf5e9dd7cd",
+  "name": "v++",
+  "logFile": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/krnl_dram_rw/krnl_dram_rw.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2023.1/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -t hw --platform xilinx_u2_gen3x4_xdma_gc_2_202110_1 -c -k krnl_dram_rw hls/krnl_dram_rw.cpp -o xo/krnl_dram_rw.xo ",
+  "args": [
+   "-t",
+   "hw",
+   "--platform",
+   "xilinx_u2_gen3x4_xdma_gc_2_202110_1",
+   "-c",
+   "-k",
+   "krnl_dram_rw",
+   "hls/krnl_dram_rw.cpp",
+   "-o",
+   "xo/krnl_dram_rw.xo"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/owner/Desktop/dram_rw/krnl_dram_rw"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 16:26:39 2023",
+ "timestampMillis": "1702254399978",
+ "status": {
+  "cmdId": "29169b54-7839-45b3-aaee-59bf5e9dd7cd",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Sun Dec 10 16:26:41 2023",
+ "timestampMillis": "1702254401827",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u2_gen3x4_xdma_gc_2_202110_1.xpfm",
+  "hardwareDsa": "hw.xsa",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u2_gen3x4_xdma_gc_2_202110_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "krnl_dram_rw",
+     "file": "/home/owner/Desktop/dram_rw/krnl_dram_rw/xo/krnl_dram_rw.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/owner/Desktop/dram_rw/krnl_dram_rw/hls/krnl_dram_rw.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2023.1. SW Build 3860322 on 2023-05-04-06:32:48"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Dec 10 16:26:41 2023",
+ "timestampMillis": "1702254401828",
+ "buildStep": {
+  "cmdId": "57a7268e-a4e8-41be-bb1a-cdf70279ef87",
+  "name": "vitis_hls",
+  "logFile": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/krnl_dram_rw/krnl_dram_rw/vitis_hls.log",
+  "commandLine": "vitis_hls -f /home/owner/Desktop/dram_rw/krnl_dram_rw/_x/krnl_dram_rw/krnl_dram_rw/krnl_dram_rw.tcl -messageDb vitis_hls.pb",
+  "args": [
+   "vitis_hls",
+   "-f",
+   "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/krnl_dram_rw/krnl_dram_rw/krnl_dram_rw.tcl",
+   "-messageDb",
+   "vitis_hls.pb"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/owner/Desktop/dram_rw/krnl_dram_rw"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 16:26:41 2023",
+ "timestampMillis": "1702254401828",
+ "status": {
+  "cmdId": "57a7268e-a4e8-41be-bb1a-cdf70279ef87",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 16:27:02 2023",
+ "timestampMillis": "1702254422474",
+ "status": {
+  "cmdId": "57a7268e-a4e8-41be-bb1a-cdf70279ef87",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:27:02 2023",
+ "timestampMillis": "1702254422478",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/krnl_dram_rw/krnl_dram_rw/krnl_dram_rw/solution/.autopilot/db/krnl_dram_rw.design.xml",
+  "name": "krnl_dram_rw",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_REPORT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:27:02 2023",
+ "timestampMillis": "1702254422478",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/krnl_dram_rw/krnl_dram_rw/krnl_dram_rw/solution/.autopilot/db/.message_syn.xml",
+  "name": "krnl_dram_rw",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_DRC_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:27:02 2023",
+ "timestampMillis": "1702254422478",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/krnl_dram_rw/hls_reports/krnl_dram_rw_csynth.rpt",
+  "name": "krnl_dram_rw",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_HLS_CSYNTH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:27:02 2023",
+ "timestampMillis": "1702254422478",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/krnl_dram_rw/krnl_dram_rw/krnl_dram_rw/solution/syn/report/krnl_dram_rw_csynth.xml",
+  "name": "krnl_dram_rw",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_CSYNTH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:27:02 2023",
+ "timestampMillis": "1702254422479",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/krnl_dram_rw/system_estimate_krnl_dram_rw.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 16:27:02 2023",
+ "timestampMillis": "1702254422499",
+ "status": {
+  "cmdId": "29169b54-7839-45b3-aaee-59bf5e9dd7cd",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:27:02 2023",
+ "timestampMillis": "1702254422530",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/krnl_dram_rw/v++_compile_krnl_dram_rw_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:27:02 2023",
+ "timestampMillis": "1702254422530",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/v++_compile_krnl_dram_rw_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

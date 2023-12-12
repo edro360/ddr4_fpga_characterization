@@ -1,0 +1,2055 @@
+<ENTRY>
+{
+ "thisFile": "/home/owner/Desktop/dram_rw/krnl_dram_rw/xclbin/krnl_dram_rw.xclbin.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Sun Dec 10 16:28:51 2023",
+ "timestampMillis": "1702254531746",
+ "buildStep": {
+  "cmdId": "ab5c1e82-598e-4d0f-b53d-c0a195d5c595",
+  "name": "v++",
+  "logFile": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/link.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2023.1/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -t hw -s -g --link --config xclbin/krnl_dram_config.cfg --optimize 0 -o xclbin/krnl_dram_rw.xclbin xo/krnl_dram_rw.xo ",
+  "args": [
+   "-t",
+   "hw",
+   "-s",
+   "-g",
+   "--link",
+   "--config",
+   "xclbin/krnl_dram_config.cfg",
+   "--optimize",
+   "0",
+   "-o",
+   "xclbin/krnl_dram_rw.xclbin",
+   "xo/krnl_dram_rw.xo"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/xclbin/krnl_dram_config.cfg",
+    "content": "platform=xilinx_u2_gen3x4_xdma_gc_2_202110_1\n\n[advanced]\nparam=compiler.userPostSysLinkOverlayTcl=xclbin/modify_dram.tcl\n\n[connectivity]\nsp=krnl_dram_rw_1.dummy:plram\nsp=krnl_dram_rw_1.data_o:bank0\n"
+   }
+  ],
+  "cwd": "/home/owner/Desktop/dram_rw/krnl_dram_rw"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 16:28:51 2023",
+ "timestampMillis": "1702254531746",
+ "status": {
+  "cmdId": "ab5c1e82-598e-4d0f-b53d-c0a195d5c595",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Sun Dec 10 16:28:53 2023",
+ "timestampMillis": "1702254533551",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u2_gen3x4_xdma_gc_2_202110_1.xpfm",
+  "hardwareDsa": "hw.xsa",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u2_gen3x4_xdma_gc_2_202110_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "krnl_dram_rw",
+    "file": "/home/owner/Desktop/dram_rw/krnl_dram_rw/xclbin/krnl_dram_rw.xclbin",
+    "reports": [],
+    "uuid": ""
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "krnl_dram_rw",
+     "file": "/home/owner/Desktop/dram_rw/krnl_dram_rw/xo/krnl_dram_rw.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/xo/krnl_dram_rw/krnl_dram_rw/cpu_sources/krnl_dram_rw.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "krnl_dram_rw_1"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2023.1. SW Build 3860322 on 2023-05-04-06:32:48"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Dec 10 16:28:53 2023",
+ "timestampMillis": "1702254533648",
+ "buildStep": {
+  "cmdId": "09db76fd-544e-4bd0-a772-d19ad16e4e38",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo /home/owner/Desktop/dram_rw/krnl_dram_rw/xo/krnl_dram_rw.xo -keep --config /home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u2_gen3x4_xdma_gc_2_202110_1/xilinx_u2_gen3x4_xdma_gc_2_202110_1.xpfm --target hw --output_dir /home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int --temp_dir /home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/sys_link",
+  "args": [
+   "--xo",
+   "/home/owner/Desktop/dram_rw/krnl_dram_rw/xo/krnl_dram_rw.xo",
+   "-keep",
+   "--config",
+   "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/syslinkConfig.ini",
+   "--xpfm",
+   "/opt/xilinx/platforms/xilinx_u2_gen3x4_xdma_gc_2_202110_1/xilinx_u2_gen3x4_xdma_gc_2_202110_1.xpfm",
+   "--target",
+   "hw",
+   "--output_dir",
+   "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int",
+   "--temp_dir",
+   "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/sys_link"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/syslinkConfig.ini",
+    "content": "sp=krnl_dram_rw_1.dummy:plram\nsp=krnl_dram_rw_1.data_o:bank0\n\n"
+   }
+  ],
+  "cwd": "/home/owner/Desktop/dram_rw/krnl_dram_rw"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 16:28:53 2023",
+ "timestampMillis": "1702254533648",
+ "status": {
+  "cmdId": "09db76fd-544e-4bd0-a772-d19ad16e4e38",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 16:28:59 2023",
+ "timestampMillis": "1702254539710",
+ "status": {
+  "cmdId": "09db76fd-544e-4bd0-a772-d19ad16e4e38",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Dec 10 16:28:59 2023",
+ "timestampMillis": "1702254539711",
+ "buildStep": {
+  "cmdId": "560cbabc-2da4-4124-a83b-295453a20f77",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -sdsl /home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/sdsl.dat -rtd /home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/cf2sw.rtd -nofilter /home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/cf2sw_full.rtd -xclbin /home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/xclbin_orig.xml -o /home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/xclbin_orig.1.xml",
+  "args": [
+   "-sdsl",
+   "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/sdsl.dat",
+   "-rtd",
+   "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/cf2sw.rtd",
+   "-nofilter",
+   "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/cf2sw_full.rtd",
+   "-xclbin",
+   "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/xclbin_orig.xml",
+   "-o",
+   "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/xclbin_orig.1.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/owner/Desktop/dram_rw/krnl_dram_rw"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 16:28:59 2023",
+ "timestampMillis": "1702254539711",
+ "status": {
+  "cmdId": "560cbabc-2da4-4124-a83b-295453a20f77",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 16:29:01 2023",
+ "timestampMillis": "1702254541120",
+ "status": {
+  "cmdId": "560cbabc-2da4-4124-a83b-295453a20f77",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Dec 10 16:29:01 2023",
+ "timestampMillis": "1702254541121",
+ "buildStep": {
+  "cmdId": "688b51cb-dc9d-4c74-8578-9ea2cd4de353",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/owner/Desktop/dram_rw/krnl_dram_rw"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 16:29:01 2023",
+ "timestampMillis": "1702254541121",
+ "status": {
+  "cmdId": "688b51cb-dc9d-4c74-8578-9ea2cd4de353",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:29:01 2023",
+ "timestampMillis": "1702254541222",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/systemDiagramModel.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 16:29:01 2023",
+ "timestampMillis": "1702254541223",
+ "status": {
+  "cmdId": "688b51cb-dc9d-4c74-8578-9ea2cd4de353",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Dec 10 16:29:01 2023",
+ "timestampMillis": "1702254541223",
+ "buildStep": {
+  "cmdId": "878c0ec1-f8b9-461e-b608-84bab673d84e",
+  "name": "vpl",
+  "logFile": "",
+  "commandLine": "vpl -t hw -f xilinx_u2_gen3x4_xdma_gc_2_202110_1 -s -g --remote_ip_cache /home/owner/Desktop/dram_rw/krnl_dram_rw/.ipcache --output_dir /home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int --log_dir /home/owner/Desktop/dram_rw/krnl_dram_rw/_x/logs/link --report_dir /home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link --config /home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/vplConfig.ini -k /home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link --no-info --iprepo /home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/xo/ip_repo/xilinx_com_hls_krnl_dram_rw_1_0 --messageDb /home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/run_link/vpl.pb /home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/dr.bd.tcl",
+  "args": [
+   "-t",
+   "hw",
+   "-f",
+   "xilinx_u2_gen3x4_xdma_gc_2_202110_1",
+   "-s",
+   "-g",
+   "--remote_ip_cache",
+   "/home/owner/Desktop/dram_rw/krnl_dram_rw/.ipcache",
+   "--output_dir",
+   "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int",
+   "--log_dir",
+   "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/logs/link",
+   "--report_dir",
+   "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link",
+   "--config",
+   "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/vplConfig.ini",
+   "-k",
+   "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/kernel_info.dat",
+   "--webtalk_flag",
+   "Vitis",
+   "--temp_dir",
+   "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link",
+   "--no-info",
+   "--iprepo",
+   "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/xo/ip_repo/xilinx_com_hls_krnl_dram_rw_1_0",
+   "--messageDb",
+   "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/run_link/vpl.pb",
+   "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/dr.bd.tcl"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/vplConfig.ini",
+    "content": "[advanced]\nmisc=report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\nmisc=report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\nparam=compiler.enablePerformanceTrace=1\nparam=compiler.userPostSysLinkOverlayTcl=/home/owner/Desktop/dram_rw/krnl_dram_rw/xclbin/modify_dram.tcl\nparam=hw_emu.enableDebugWaveform=1\nparam=hw_emu.enableProfiling=1\nparam=compiler.vppCurrentWorkingDir=/home/owner/Desktop/dram_rw/krnl_dram_rw\nmisc=BinaryName=krnl_dram_rw\n\n[connectivity]\nnk=krnl_dram_rw:1:krnl_dram_rw_1\n\n[vivado]\nprop=run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\n\n"
+   }
+  ],
+  "cwd": "/home/owner/Desktop/dram_rw/krnl_dram_rw"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 16:29:01 2023",
+ "timestampMillis": "1702254541223",
+ "status": {
+  "cmdId": "878c0ec1-f8b9-461e-b608-84bab673d84e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Sun Dec 10 16:29:01 2023",
+ "timestampMillis": "1702254541843",
+ "buildStep": {
+  "cmdId": "e1c8357c-1f19-4f30-9563-289955fc8cce",
+  "name": "vpl",
+  "logFile": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/link.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2023.1/bin/unwrapped/lnx64.o/vpl -t hw -f xilinx_u2_gen3x4_xdma_gc_2_202110_1 -s -g --remote_ip_cache /home/owner/Desktop/dram_rw/krnl_dram_rw/.ipcache --output_dir /home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int --log_dir /home/owner/Desktop/dram_rw/krnl_dram_rw/_x/logs/link --report_dir /home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link --config /home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/vplConfig.ini -k /home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link --no-info --iprepo /home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/xo/ip_repo/xilinx_com_hls_krnl_dram_rw_1_0 --messageDb /home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/run_link/vpl.pb /home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/dr.bd.tcl ",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 16:29:01 2023",
+ "timestampMillis": "1702254541843",
+ "status": {
+  "cmdId": "e1c8357c-1f19-4f30-9563-289955fc8cce",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_VivadoProject",
+ "dateTimestamp": "Sun Dec 10 16:29:04 2023",
+ "timestampMillis": "1702254544482",
+ "vivadoProject": {
+  "openDir": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/vivado/vpl",
+  "openScript": "openprj.tcl",
+  "relativeProject": "prj/prj.xpr"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Dec 10 16:29:04 2023",
+ "timestampMillis": "1702254544482",
+ "buildStep": {
+  "cmdId": "e4408e49-ab38-42b5-a1b7-5ee340314f15",
+  "name": "vivado",
+  "logFile": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/vivado/vpl/vivado.log",
+  "commandLine": "vivado -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace",
+  "args": [
+   "-log",
+   "vivado.log",
+   "-applog",
+   " -m64",
+   "-messageDb",
+   "vivado.pb",
+   "-mode",
+   "batch",
+   "-source",
+   "vpl.tcl",
+   "-notrace"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 16:29:04 2023",
+ "timestampMillis": "1702254544482",
+ "status": {
+  "cmdId": "e4408e49-ab38-42b5-a1b7-5ee340314f15",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:29:33 2023",
+ "timestampMillis": "1702254573341",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/automation_summary_update_bd.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Sun Dec 10 16:34:31 2023",
+ "timestampMillis": "1702254871488",
+ "buildStep": {
+  "cmdId": "dd2103f1-5720-4308-ad0a-5b9042f595e8",
+  "name": "vivado.impl",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/vivado/vpl"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 16:34:31 2023",
+ "timestampMillis": "1702254871489",
+ "status": {
+  "cmdId": "dd2103f1-5720-4308-ad0a-5b9042f595e8",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Sun Dec 10 16:34:31 2023",
+ "timestampMillis": "1702254871489",
+ "buildStep": {
+  "cmdId": "91e036da-8c42-4fee-820a-06e816ca7e54",
+  "name": "vivado.impl.impl_1",
+  "logFile": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/vivado/vpl/prj/prj.runs/impl_1/runme.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/vivado/vpl/prj/prj.runs/impl_1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 16:34:31 2023",
+ "timestampMillis": "1702254871489",
+ "status": {
+  "cmdId": "91e036da-8c42-4fee-820a-06e816ca7e54",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:56:21 2023",
+ "timestampMillis": "1702256181176",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/vivado/vpl/prj/prj.runs/impl_1/system_diagram.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:56:33 2023",
+ "timestampMillis": "1702256193304",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/kernel_service.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:56:33 2023",
+ "timestampMillis": "1702256193313",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/kernel_service.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:57:18 2023",
+ "timestampMillis": "1702256238201",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/vivado/vpl/prj/prj.runs/impl_1/dr_timing_summary.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_FAIL",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366487",
+ "status": {
+  "cmdId": "e4408e49-ab38-42b5-a1b7-5ee340314f15",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366504",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/imp/impl_1_full_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366504",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/imp/impl_1_kernel_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366504",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/imp/impl_1_slr_util_placed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366505",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/imp/impl_1_slr_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366505",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/imp/impl_1_slr_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366505",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/imp/impl_1_kernel_util_routed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366505",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/imp/impl_1_full_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366506",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/imp/impl_1_full_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366506",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/imp/impl_1_full_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366506",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/imp/impl_1_slr_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366506",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/imp/impl_1_kernel_util_placed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366506",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/imp/impl_1_kernel_util_synthed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366506",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/imp/impl_1_kernel_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366506",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/imp/impl_1_kernel_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366506",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/imp/impl_1_full_util_synthed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366506",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/imp/impl_1_full_util_placed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366524",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_psreset_gate_pr_kernel2_0_synth_1_ulp_psreset_gate_pr_kernel2_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366524",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_psreset_gate_pr_ddrmem_1_0_synth_1_ulp_psreset_gate_pr_ddrmem_1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366524",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_psreset_gate_pr_data_0_synth_1_ulp_psreset_gate_pr_data_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366524",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_psreset_gate_pr_control_0_synth_1_ulp_psreset_gate_pr_control_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366524",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_logic_reset_op_0_synth_1_ulp_logic_reset_op_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366524",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_regslice_data_static1_0_synth_1_ulp_regslice_data_static1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366524",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_regslice_data_static_0_synth_1_ulp_regslice_data_static_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366524",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_regslice_control_mgntpf_0_synth_1_ulp_regslice_control_mgntpf_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366524",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_freq_counter_0_0_synth_1_ulp_freq_counter_0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366524",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_axi_vip_data_static1_0_synth_1_ulp_axi_vip_data_static1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366524",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_axi_vip_data_static_0_synth_1_ulp_axi_vip_data_static_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366525",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_axi_vip_ctrl_userpf_0_synth_1_ulp_axi_vip_ctrl_userpf_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366525",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_axi_vip_ctrl_mgntpf_0_synth_1_ulp_axi_vip_ctrl_mgntpf_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366525",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_axi_gpio_null_0_synth_1_ulp_axi_gpio_null_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366525",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_axi_cdc_data_static1_0_synth_1_ulp_axi_cdc_data_static1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366525",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_axi_cdc_data_static_0_synth_1_ulp_axi_cdc_data_static_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366525",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_axi_protocol_convert_0_0_synth_1_ulp_axi_protocol_convert_0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366525",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_fpga_dna_module_0_0_synth_1_ulp_fpga_dna_module_0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366525",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_debug_bridge_xsdbm_0_synth_1_ulp_debug_bridge_xsdbm_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366525",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_user_debug_bridge_0_synth_1_ulp_user_debug_bridge_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366525",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_regslice_periph_null_0_synth_1_ulp_regslice_periph_null_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366525",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_psreset_ddrmem_n_1_0_synth_1_ulp_psreset_ddrmem_n_1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366525",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_ddrmem_1_0_synth_1_ulp_ddrmem_1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366526",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_ddr1_clk_ibufds_0_synth_1_ulp_ddr1_clk_ibufds_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366526",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_ddr1_clk_bufg_0_synth_1_ulp_ddr1_clk_bufg_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366526",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_axi_vip_0_0_synth_1_ulp_axi_vip_0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366526",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_axi_bram_ctrl_0_bram_0_synth_1_ulp_axi_bram_ctrl_0_bram_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366526",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_axi_bram_ctrl_0_0_synth_1_ulp_axi_bram_ctrl_0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366526",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_ii_level0_wire_0_synth_1_ulp_ii_level0_wire_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366526",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/bd_0349_xsdbm_0_synth_1_bd_0349_xsdbm_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366526",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/bd_0349_lut_buffer_0_synth_1_bd_0349_lut_buffer_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366526",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/bd_9997_bsip_0_synth_1_bd_9997_bsip_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366526",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/bd_9997_bs_switch_1_0_synth_1_bd_9997_bs_switch_1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366527",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_xbar_4_synth_1_ulp_xbar_4_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366527",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/bd_9997_axi_jtag_0_synth_1_bd_9997_axi_jtag_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366527",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_s03_mmu_0_synth_1_ulp_s03_mmu_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366527",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_xbar_2_synth_1_ulp_xbar_2_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366527",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_krnl_dram_rw_1_0_synth_1_ulp_krnl_dram_rw_1_0_utilization_synth.rpt",
+  "name": "krnl_dram_rw",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366527",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_xbar_5_synth_1_ulp_xbar_5_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366527",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_xbar_3_synth_1_ulp_xbar_3_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366527",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_xbar_6_synth_1_ulp_xbar_6_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366527",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_auto_rs_w_0_synth_1_ulp_auto_rs_w_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366527",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_auto_cc_2_synth_1_ulp_auto_cc_2_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366527",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_s03_regslice_0_synth_1_ulp_s03_regslice_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366527",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_s02_regslice_0_synth_1_ulp_s02_regslice_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366528",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_s01_regslice_5_synth_1_ulp_s01_regslice_5_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366528",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_auto_us_0_synth_1_ulp_auto_us_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366528",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_s01_regslice_3_synth_1_ulp_s01_regslice_3_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366528",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_auto_us_cc_df_0_synth_1_ulp_auto_us_cc_df_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366528",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_auto_cc_0_synth_1_ulp_auto_cc_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366528",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_auto_us_cc_df_1_synth_1_ulp_auto_us_cc_df_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366528",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_s00_regslice_20_synth_1_ulp_s00_regslice_20_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366528",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_s01_regslice_4_synth_1_ulp_s01_regslice_4_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366528",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_m01_regslice_0_synth_1_ulp_m01_regslice_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366528",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_m00_regslice_0_synth_1_ulp_m00_regslice_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366528",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_s00_regslice_22_synth_1_ulp_s00_regslice_22_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366529",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/syn/ulp_auto_cc_1_synth_1_ulp_auto_cc_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366529",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/imp/impl_1_system_diagram.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": "91e036da-8c42-4fee-820a-06e816ca7e54"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366537",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "91e036da-8c42-4fee-820a-06e816ca7e54"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366542",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "91e036da-8c42-4fee-820a-06e816ca7e54"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366542",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpv",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_CONCISE",
+  "cmdId": "91e036da-8c42-4fee-820a-06e816ca7e54"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366551",
+ "status": {
+  "cmdId": "e1c8357c-1f19-4f30-9563-289955fc8cce",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366557",
+ "status": {
+  "cmdId": "878c0ec1-f8b9-461e-b608-84bab673d84e",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366558",
+ "buildStep": {
+  "cmdId": "141df496-c5f9-49f5-9f9a-addf0e4c909d",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "rtdgen",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/owner/Desktop/dram_rw/krnl_dram_rw"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366558",
+ "status": {
+  "cmdId": "141df496-c5f9-49f5-9f9a-addf0e4c909d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366558",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/krnl_dram_rw_xml.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "XCLBIN_INFO",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366558",
+ "buildStep": {
+  "cmdId": "27446811-1249-48de-a77c-c18be9622c55",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -a /home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/address_map.xml -sdsl /home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/sdsl.dat -xclbin /home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/xclbin_orig.xml -rtd /home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/krnl_dram_rw.rtd -o /home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/krnl_dram_rw.xml",
+  "args": [
+   "-a",
+   "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/address_map.xml",
+   "-sdsl",
+   "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/sdsl.dat",
+   "-xclbin",
+   "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/xclbin_orig.xml",
+   "-rtd",
+   "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/krnl_dram_rw.rtd",
+   "-o",
+   "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/krnl_dram_rw.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/owner/Desktop/dram_rw/krnl_dram_rw"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 16:59:26 2023",
+ "timestampMillis": "1702256366558",
+ "status": {
+  "cmdId": "27446811-1249-48de-a77c-c18be9622c55",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 16:59:27 2023",
+ "timestampMillis": "1702256367807",
+ "status": {
+  "cmdId": "27446811-1249-48de-a77c-c18be9622c55",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Dec 10 16:59:27 2023",
+ "timestampMillis": "1702256367808",
+ "buildStep": {
+  "cmdId": "9a3cd24f-18f5-4155-aa42-70234aaad6ec",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeSystemDiagram",
+  "args": [
+   "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/krnl_dram_rw.rtd",
+   "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/systemDiagramModelSlrBaseAddress.json"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/owner/Desktop/dram_rw/krnl_dram_rw"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 16:59:27 2023",
+ "timestampMillis": "1702256367808",
+ "status": {
+  "cmdId": "9a3cd24f-18f5-4155-aa42-70234aaad6ec",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:27 2023",
+ "timestampMillis": "1702256367809",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/systemDiagramModelSlrBaseAddress.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 16:59:27 2023",
+ "timestampMillis": "1702256367809",
+ "status": {
+  "cmdId": "9a3cd24f-18f5-4155-aa42-70234aaad6ec",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Dec 10 16:59:27 2023",
+ "timestampMillis": "1702256367809",
+ "buildStep": {
+  "cmdId": "ec327ab4-f23d-4043-9e3a-ed1f5e99e3cc",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeAutomationSummary",
+  "args": [
+   "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/automation_summary.txt"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/owner/Desktop/dram_rw/krnl_dram_rw"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 16:59:27 2023",
+ "timestampMillis": "1702256367809",
+ "status": {
+  "cmdId": "ec327ab4-f23d-4043-9e3a-ed1f5e99e3cc",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:27 2023",
+ "timestampMillis": "1702256367809",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/automation_summary.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 16:59:27 2023",
+ "timestampMillis": "1702256367809",
+ "status": {
+  "cmdId": "ec327ab4-f23d-4043-9e3a-ed1f5e99e3cc",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 16:59:27 2023",
+ "timestampMillis": "1702256367809",
+ "status": {
+  "cmdId": "141df496-c5f9-49f5-9f9a-addf0e4c909d",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Dec 10 16:59:27 2023",
+ "timestampMillis": "1702256367810",
+ "buildStep": {
+  "cmdId": "2a980abe-0e6e-42dd-a48a-9675be786f99",
+  "name": "xclbinutil",
+  "logFile": "",
+  "commandLine": "xclbinutil --add-section BITSTREAM:RAW:/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/partial.bit --force --target hw --key-value SYS:dfx_enable:true --add-section :JSON:/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/krnl_dram_rw.rtd --append-section :JSON:/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/krnl_dram_rw_xml.rtd --add-section BUILD_METADATA:JSON:/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/krnl_dram_rw_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/krnl_dram_rw.xml --add-section SYSTEM_METADATA:RAW:/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_u2_gen3x4_xdma_gc_2_202110_1 --output /home/owner/Desktop/dram_rw/krnl_dram_rw/xclbin/krnl_dram_rw.xclbin",
+  "args": [
+   "--add-section",
+   "BITSTREAM:RAW:/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/partial.bit",
+   "--force",
+   "--target",
+   "hw",
+   "--key-value",
+   "SYS:dfx_enable:true",
+   "--add-section",
+   ":JSON:/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/krnl_dram_rw.rtd",
+   "--append-section",
+   ":JSON:/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/appendSection.rtd",
+   "--add-section",
+   "CLOCK_FREQ_TOPOLOGY:JSON:/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/krnl_dram_rw_xml.rtd",
+   "--add-section",
+   "BUILD_METADATA:JSON:/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/krnl_dram_rw_build.rtd",
+   "--add-section",
+   "EMBEDDED_METADATA:RAW:/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/krnl_dram_rw.xml",
+   "--add-section",
+   "SYSTEM_METADATA:RAW:/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/link/int/systemDiagramModelSlrBaseAddress.json",
+   "--key-value",
+   "SYS:PlatformVBNV:xilinx_u2_gen3x4_xdma_gc_2_202110_1",
+   "--output",
+   "/home/owner/Desktop/dram_rw/krnl_dram_rw/xclbin/krnl_dram_rw.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/owner/Desktop/dram_rw/krnl_dram_rw"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 16:59:27 2023",
+ "timestampMillis": "1702256367810",
+ "status": {
+  "cmdId": "2a980abe-0e6e-42dd-a48a-9675be786f99",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 16:59:27 2023",
+ "timestampMillis": "1702256367862",
+ "status": {
+  "cmdId": "2a980abe-0e6e-42dd-a48a-9675be786f99",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Dec 10 16:59:27 2023",
+ "timestampMillis": "1702256367862",
+ "buildStep": {
+  "cmdId": "ed139ea9-c337-424c-8974-86fb41e023ae",
+  "name": "xclbinutilinfo",
+  "logFile": "",
+  "commandLine": "xclbinutil --quiet --force --info /home/owner/Desktop/dram_rw/krnl_dram_rw/xclbin/krnl_dram_rw.xclbin.info --input /home/owner/Desktop/dram_rw/krnl_dram_rw/xclbin/krnl_dram_rw.xclbin",
+  "args": [
+   "--quiet",
+   "--force",
+   "--info",
+   "/home/owner/Desktop/dram_rw/krnl_dram_rw/xclbin/krnl_dram_rw.xclbin.info",
+   "--input",
+   "/home/owner/Desktop/dram_rw/krnl_dram_rw/xclbin/krnl_dram_rw.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/owner/Desktop/dram_rw/krnl_dram_rw"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 16:59:27 2023",
+ "timestampMillis": "1702256367862",
+ "status": {
+  "cmdId": "ed139ea9-c337-424c-8974-86fb41e023ae",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 16:59:27 2023",
+ "timestampMillis": "1702256367963",
+ "status": {
+  "cmdId": "ed139ea9-c337-424c-8974-86fb41e023ae",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Dec 10 16:59:27 2023",
+ "timestampMillis": "1702256367964",
+ "buildStep": {
+  "cmdId": "d7c05adc-a959-4375-ab7b-9045b951eb89",
+  "name": "generate_sc_driver",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/owner/Desktop/dram_rw/krnl_dram_rw"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 16:59:27 2023",
+ "timestampMillis": "1702256367964",
+ "status": {
+  "cmdId": "d7c05adc-a959-4375-ab7b-9045b951eb89",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 16:59:27 2023",
+ "timestampMillis": "1702256367964",
+ "status": {
+  "cmdId": "d7c05adc-a959-4375-ab7b-9045b951eb89",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:27 2023",
+ "timestampMillis": "1702256367966",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/system_estimate_krnl_dram_rw.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:27 2023",
+ "timestampMillis": "1702256367968",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 16:59:27 2023",
+ "timestampMillis": "1702256367968",
+ "status": {
+  "cmdId": "ab5c1e82-598e-4d0f-b53d-c0a195d5c595",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:27 2023",
+ "timestampMillis": "1702256367998",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/reports/link/v++_link_krnl_dram_rw_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 16:59:27 2023",
+ "timestampMillis": "1702256367998",
+ "report": {
+  "path": "/home/owner/Desktop/dram_rw/krnl_dram_rw/_x/v++_link_krnl_dram_rw_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

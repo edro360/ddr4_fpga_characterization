@@ -1,14 +1,14 @@
 # DDR4 FPGA Characterization
 
 ## Abstract
-This project involves the creation and implementation of an FPGA-accelerated application utilizing a Samsung SmartSSD. The project aims to harness the computational power of the on-board FPGA to accelerate specific data processing tasks, thereby significantly reducing the data processing time and offloading the workload from the host system. The development environment used for this project is Xilinx Vivado/Vitis and the FPGA configuration is done using the Xilinx Runtime (XRT) along with the Samsung SmartSSD FPGA Shell.
+This project involves the creation of an application utilizing a Samsung SmartSSD. The project aims to characterize and test if on-board DRAM is able to be used in an unconventional manner, then to harness that exploit in order to do neural network computation. The development environment used for this project is Xilinx Vivado/Vitis and the FPGA configuration is done using the Xilinx Runtime (XRT) along with the Samsung SmartSSD FPGA Shell and PYNQ.
 
 ## Requirements:
 To replicate the environment and run the project, the following software and tools are required:
 
 1. **Xilinx Vivado/Vitis**:
     - Download and install Xilinx Vivado/Vitis from the [Xilinx official website](https://www.xilinx.com/support/download.html).
-    - Ensure that you have the necessary licenses for the tools and IP cores used in this project.
+    - The necessary licenses for the tools and IP cores used in this project should be included through normal installation.
 
 2. **Xilinx XRT (Xilinx Runtime)**:
     - Download and install Xilinx Runtime (XRT) from the [Xilinx official website](https://www.xilinx.com/support/download.html).
@@ -17,11 +17,32 @@ To replicate the environment and run the project, the following software and too
 3. **Samsung SmartSSD FPGA Shell**:
     - Follow the Samsung SmartSSD FPGA Shell install procedure found in [Xilinx's SmartSSD Documentation](https://www.xilinx.com/content/dam/xilinx/support/documents/boards_and_kits/accelerator-cards/1_3/ug1382-smartssd-csd.pdf).
 
-## Replication:
-    1. Open the Vivado/Vitis project provided in the project repository.
-    2. Build the project to generate the FPGA bitstream.
-    3. Use the Xilinx Runtime (XRT) to load the bitstream onto the SmartSSD.
-    4. Run the application on your host machine, and verify the acceleration on data processing tasks.
+4. **Alveo-PYNQ Repository**
+    - We will be using the Jupyter Notebooks found in the repository to program the FPGA. [GitHub](https://github.com/Xilinx/Alveo-PYNQ)
+
+4. **Linux/MacOS Terminal**
+    - We will be using the terminal to execute the project.
+
+## Quick Guide:
+1. Clone the repository.
+```bash
+git clone l
+```
+
+2. Navigate to krnl_dummy to build the bitstream
+    - The outputs can be found in the `xclbin/` and `xo/` folders but if you'd like to build them yourself then enter the following into the terminal.
+```bash
+cd krnl_dummy
+make xo
+make xclbin
+```
+
+3. (Optional) Open the Vivado/Vitis project found in `_x/link/vivado/vpl/prj/` which is generated along with the xclbin file.
+    - This allows us to see the block diagram of the design going into the FPGA and verify that the DRAM DDR4 IP has been modified.
+    
+4. Navigate to `pynq/` and copy the .ipynb and .xclbin files to a new directory in the Alveo-PYNQ repository `Alveo-PYNQ/pynq_alveo_examples/notebooks/dram_fpga_char/`
+    
+5. Open the .ipynb files using Jupyter Notebooks and follow the instructions there.
 
 ## License:
 MIT License

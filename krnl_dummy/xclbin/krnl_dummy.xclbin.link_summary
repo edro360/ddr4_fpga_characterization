@@ -1,0 +1,2025 @@
+<ENTRY>
+{
+ "thisFile": "/home/owner/Desktop/fpga_dram/xclbin/krnl_dummy.xclbin.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Sun Dec 10 17:26:22 2023",
+ "timestampMillis": "1702257982083",
+ "buildStep": {
+  "cmdId": "4d45421d-5aeb-48a0-9f75-d1f6d2b892cd",
+  "name": "v++",
+  "logFile": "/home/owner/Desktop/fpga_dram/_x/link/link.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2023.1/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -t hw -s -g --link --config xclbin/krnl_configuration.cfg -o xclbin/krnl_dummy.xclbin xo/krnl_dummy.xo ",
+  "args": [
+   "-t",
+   "hw",
+   "-s",
+   "-g",
+   "--link",
+   "--config",
+   "xclbin/krnl_configuration.cfg",
+   "-o",
+   "xclbin/krnl_dummy.xclbin",
+   "xo/krnl_dummy.xo"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/owner/Desktop/fpga_dram/xclbin/krnl_configuration.cfg",
+    "content": "platform=xilinx_u2_gen3x4_xdma_gc_2_202110_1\n\n[advanced]\nparam=compiler.userPostSysLinkOverlayTcl=xclbin/modify_dram.tcl\n\n[connectivity]\nsp=krnl_dummy_1.dummy_a:plram\nsp=krnl_dummy_1.dummy_b:bank0\n"
+   }
+  ],
+  "cwd": "/home/owner/Desktop/fpga_dram"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 17:26:22 2023",
+ "timestampMillis": "1702257982083",
+ "status": {
+  "cmdId": "4d45421d-5aeb-48a0-9f75-d1f6d2b892cd",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Sun Dec 10 17:26:24 2023",
+ "timestampMillis": "1702257984225",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u2_gen3x4_xdma_gc_2_202110_1.xpfm",
+  "hardwareDsa": "hw.xsa",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u2_gen3x4_xdma_gc_2_202110_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "krnl_dummy",
+    "file": "/home/owner/Desktop/fpga_dram/xclbin/krnl_dummy.xclbin",
+    "reports": [],
+    "uuid": ""
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "krnl_dummy",
+     "file": "/home/owner/Desktop/fpga_dram/xo/krnl_dummy.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/owner/Desktop/fpga_dram/_x/link/int/xo/krnl_dummy/krnl_dummy/cpu_sources/krnl_dummy.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "krnl_dummy_1"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2023.1. SW Build 3860322 on 2023-05-04-06:32:48"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Dec 10 17:26:24 2023",
+ "timestampMillis": "1702257984341",
+ "buildStep": {
+  "cmdId": "a28460ce-9e1a-4234-bc2e-bbbc72a3110f",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo /home/owner/Desktop/fpga_dram/xo/krnl_dummy.xo -keep --config /home/owner/Desktop/fpga_dram/_x/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u2_gen3x4_xdma_gc_2_202110_1/xilinx_u2_gen3x4_xdma_gc_2_202110_1.xpfm --target hw --output_dir /home/owner/Desktop/fpga_dram/_x/link/int --temp_dir /home/owner/Desktop/fpga_dram/_x/link/sys_link",
+  "args": [
+   "--xo",
+   "/home/owner/Desktop/fpga_dram/xo/krnl_dummy.xo",
+   "-keep",
+   "--config",
+   "/home/owner/Desktop/fpga_dram/_x/link/int/syslinkConfig.ini",
+   "--xpfm",
+   "/opt/xilinx/platforms/xilinx_u2_gen3x4_xdma_gc_2_202110_1/xilinx_u2_gen3x4_xdma_gc_2_202110_1.xpfm",
+   "--target",
+   "hw",
+   "--output_dir",
+   "/home/owner/Desktop/fpga_dram/_x/link/int",
+   "--temp_dir",
+   "/home/owner/Desktop/fpga_dram/_x/link/sys_link"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/owner/Desktop/fpga_dram/_x/link/int/syslinkConfig.ini",
+    "content": "sp=krnl_dummy_1.dummy_a:plram\nsp=krnl_dummy_1.dummy_b:bank0\n\n"
+   }
+  ],
+  "cwd": "/home/owner/Desktop/fpga_dram"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 17:26:24 2023",
+ "timestampMillis": "1702257984341",
+ "status": {
+  "cmdId": "a28460ce-9e1a-4234-bc2e-bbbc72a3110f",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 17:26:31 2023",
+ "timestampMillis": "1702257991056",
+ "status": {
+  "cmdId": "a28460ce-9e1a-4234-bc2e-bbbc72a3110f",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Dec 10 17:26:31 2023",
+ "timestampMillis": "1702257991059",
+ "buildStep": {
+  "cmdId": "493e48c8-f291-4d24-80b6-d2d6f71118b1",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -sdsl /home/owner/Desktop/fpga_dram/_x/link/int/sdsl.dat -rtd /home/owner/Desktop/fpga_dram/_x/link/int/cf2sw.rtd -nofilter /home/owner/Desktop/fpga_dram/_x/link/int/cf2sw_full.rtd -xclbin /home/owner/Desktop/fpga_dram/_x/link/int/xclbin_orig.xml -o /home/owner/Desktop/fpga_dram/_x/link/int/xclbin_orig.1.xml",
+  "args": [
+   "-sdsl",
+   "/home/owner/Desktop/fpga_dram/_x/link/int/sdsl.dat",
+   "-rtd",
+   "/home/owner/Desktop/fpga_dram/_x/link/int/cf2sw.rtd",
+   "-nofilter",
+   "/home/owner/Desktop/fpga_dram/_x/link/int/cf2sw_full.rtd",
+   "-xclbin",
+   "/home/owner/Desktop/fpga_dram/_x/link/int/xclbin_orig.xml",
+   "-o",
+   "/home/owner/Desktop/fpga_dram/_x/link/int/xclbin_orig.1.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/owner/Desktop/fpga_dram"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 17:26:31 2023",
+ "timestampMillis": "1702257991059",
+ "status": {
+  "cmdId": "493e48c8-f291-4d24-80b6-d2d6f71118b1",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 17:26:32 2023",
+ "timestampMillis": "1702257992615",
+ "status": {
+  "cmdId": "493e48c8-f291-4d24-80b6-d2d6f71118b1",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Dec 10 17:26:32 2023",
+ "timestampMillis": "1702257992616",
+ "buildStep": {
+  "cmdId": "3653ad5a-9182-47d6-9cb0-4e9dd3518564",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/owner/Desktop/fpga_dram"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 17:26:32 2023",
+ "timestampMillis": "1702257992616",
+ "status": {
+  "cmdId": "3653ad5a-9182-47d6-9cb0-4e9dd3518564",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:26:32 2023",
+ "timestampMillis": "1702257992726",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/link/int/systemDiagramModel.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 17:26:32 2023",
+ "timestampMillis": "1702257992726",
+ "status": {
+  "cmdId": "3653ad5a-9182-47d6-9cb0-4e9dd3518564",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Dec 10 17:26:32 2023",
+ "timestampMillis": "1702257992727",
+ "buildStep": {
+  "cmdId": "5a25c535-7614-4f28-8496-da67827771bc",
+  "name": "vpl",
+  "logFile": "",
+  "commandLine": "vpl -t hw -f xilinx_u2_gen3x4_xdma_gc_2_202110_1 -s -g --remote_ip_cache /home/owner/Desktop/fpga_dram/.ipcache --output_dir /home/owner/Desktop/fpga_dram/_x/link/int --log_dir /home/owner/Desktop/fpga_dram/_x/logs/link --report_dir /home/owner/Desktop/fpga_dram/_x/reports/link --config /home/owner/Desktop/fpga_dram/_x/link/int/vplConfig.ini -k /home/owner/Desktop/fpga_dram/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/owner/Desktop/fpga_dram/_x/link --no-info --iprepo /home/owner/Desktop/fpga_dram/_x/link/int/xo/ip_repo/xilinx_com_hls_krnl_dummy_1_0 --messageDb /home/owner/Desktop/fpga_dram/_x/link/run_link/vpl.pb /home/owner/Desktop/fpga_dram/_x/link/int/dr.bd.tcl",
+  "args": [
+   "-t",
+   "hw",
+   "-f",
+   "xilinx_u2_gen3x4_xdma_gc_2_202110_1",
+   "-s",
+   "-g",
+   "--remote_ip_cache",
+   "/home/owner/Desktop/fpga_dram/.ipcache",
+   "--output_dir",
+   "/home/owner/Desktop/fpga_dram/_x/link/int",
+   "--log_dir",
+   "/home/owner/Desktop/fpga_dram/_x/logs/link",
+   "--report_dir",
+   "/home/owner/Desktop/fpga_dram/_x/reports/link",
+   "--config",
+   "/home/owner/Desktop/fpga_dram/_x/link/int/vplConfig.ini",
+   "-k",
+   "/home/owner/Desktop/fpga_dram/_x/link/int/kernel_info.dat",
+   "--webtalk_flag",
+   "Vitis",
+   "--temp_dir",
+   "/home/owner/Desktop/fpga_dram/_x/link",
+   "--no-info",
+   "--iprepo",
+   "/home/owner/Desktop/fpga_dram/_x/link/int/xo/ip_repo/xilinx_com_hls_krnl_dummy_1_0",
+   "--messageDb",
+   "/home/owner/Desktop/fpga_dram/_x/link/run_link/vpl.pb",
+   "/home/owner/Desktop/fpga_dram/_x/link/int/dr.bd.tcl"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/owner/Desktop/fpga_dram/_x/link/int/vplConfig.ini",
+    "content": "[advanced]\nmisc=report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\nmisc=report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\nparam=compiler.enablePerformanceTrace=1\nparam=compiler.userPostSysLinkOverlayTcl=/home/owner/Desktop/fpga_dram/xclbin/modify_dram.tcl\nparam=hw_emu.enableDebugWaveform=1\nparam=hw_emu.enableProfiling=1\nparam=compiler.vppCurrentWorkingDir=/home/owner/Desktop/fpga_dram\nmisc=BinaryName=krnl_dummy\n\n[connectivity]\nnk=krnl_dummy:1:krnl_dummy_1\n\n[vivado]\nprop=run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\n\n"
+   }
+  ],
+  "cwd": "/home/owner/Desktop/fpga_dram"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 17:26:32 2023",
+ "timestampMillis": "1702257992727",
+ "status": {
+  "cmdId": "5a25c535-7614-4f28-8496-da67827771bc",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Sun Dec 10 17:26:33 2023",
+ "timestampMillis": "1702257993354",
+ "buildStep": {
+  "cmdId": "43813ed6-c978-46c5-9408-54fbe286cbde",
+  "name": "vpl",
+  "logFile": "/home/owner/Desktop/fpga_dram/_x/link/link.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2023.1/bin/unwrapped/lnx64.o/vpl -t hw -f xilinx_u2_gen3x4_xdma_gc_2_202110_1 -s -g --remote_ip_cache /home/owner/Desktop/fpga_dram/.ipcache --output_dir /home/owner/Desktop/fpga_dram/_x/link/int --log_dir /home/owner/Desktop/fpga_dram/_x/logs/link --report_dir /home/owner/Desktop/fpga_dram/_x/reports/link --config /home/owner/Desktop/fpga_dram/_x/link/int/vplConfig.ini -k /home/owner/Desktop/fpga_dram/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/owner/Desktop/fpga_dram/_x/link --no-info --iprepo /home/owner/Desktop/fpga_dram/_x/link/int/xo/ip_repo/xilinx_com_hls_krnl_dummy_1_0 --messageDb /home/owner/Desktop/fpga_dram/_x/link/run_link/vpl.pb /home/owner/Desktop/fpga_dram/_x/link/int/dr.bd.tcl ",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/owner/Desktop/fpga_dram/_x/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 17:26:33 2023",
+ "timestampMillis": "1702257993354",
+ "status": {
+  "cmdId": "43813ed6-c978-46c5-9408-54fbe286cbde",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_VivadoProject",
+ "dateTimestamp": "Sun Dec 10 17:26:36 2023",
+ "timestampMillis": "1702257996022",
+ "vivadoProject": {
+  "openDir": "/home/owner/Desktop/fpga_dram/_x/link/vivado/vpl",
+  "openScript": "openprj.tcl",
+  "relativeProject": "prj/prj.xpr"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Dec 10 17:26:36 2023",
+ "timestampMillis": "1702257996031",
+ "buildStep": {
+  "cmdId": "27ca2c5e-b153-4748-94d2-80165fdef4f3",
+  "name": "vivado",
+  "logFile": "/home/owner/Desktop/fpga_dram/_x/link/vivado/vpl/vivado.log",
+  "commandLine": "vivado -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace",
+  "args": [
+   "-log",
+   "vivado.log",
+   "-applog",
+   " -m64",
+   "-messageDb",
+   "vivado.pb",
+   "-mode",
+   "batch",
+   "-source",
+   "vpl.tcl",
+   "-notrace"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/owner/Desktop/fpga_dram/_x/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 17:26:36 2023",
+ "timestampMillis": "1702257996031",
+ "status": {
+  "cmdId": "27ca2c5e-b153-4748-94d2-80165fdef4f3",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:27:08 2023",
+ "timestampMillis": "1702258028610",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/link/int/automation_summary_update_bd.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Sun Dec 10 17:32:03 2023",
+ "timestampMillis": "1702258323861",
+ "buildStep": {
+  "cmdId": "f9bee628-bc8c-4a19-b229-67a5df38fab6",
+  "name": "vivado.impl",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/owner/Desktop/fpga_dram/_x/link/vivado/vpl"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 17:32:03 2023",
+ "timestampMillis": "1702258323862",
+ "status": {
+  "cmdId": "f9bee628-bc8c-4a19-b229-67a5df38fab6",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Sun Dec 10 17:32:03 2023",
+ "timestampMillis": "1702258323862",
+ "buildStep": {
+  "cmdId": "3580ef88-67f8-46a1-87b3-7d977fd9b301",
+  "name": "vivado.impl.impl_1",
+  "logFile": "/home/owner/Desktop/fpga_dram/_x/link/vivado/vpl/prj/prj.runs/impl_1/runme.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/owner/Desktop/fpga_dram/_x/link/vivado/vpl/prj/prj.runs/impl_1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 17:32:03 2023",
+ "timestampMillis": "1702258323862",
+ "status": {
+  "cmdId": "3580ef88-67f8-46a1-87b3-7d977fd9b301",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:54:35 2023",
+ "timestampMillis": "1702259675020",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/link/vivado/vpl/prj/prj.runs/impl_1/system_diagram.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:54:48 2023",
+ "timestampMillis": "1702259688518",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/link/int/kernel_service.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:54:48 2023",
+ "timestampMillis": "1702259688519",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/link/int/kernel_service.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:55:33 2023",
+ "timestampMillis": "1702259733423",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/link/vivado/vpl/prj/prj.runs/impl_1/dr_timing_summary.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_FAIL",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:55:33 2023",
+ "timestampMillis": "1702259733433",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/link/vivado/vpl/prj/prj.runs/impl_1/dr_timing_summary.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_FAIL",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861124",
+ "status": {
+  "cmdId": "27ca2c5e-b153-4748-94d2-80165fdef4f3",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861134",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/imp/impl_1_full_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861134",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/imp/impl_1_kernel_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861135",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/imp/impl_1_slr_util_placed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861135",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/imp/impl_1_slr_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861135",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/imp/impl_1_slr_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861135",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/imp/impl_1_kernel_util_routed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861135",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/imp/impl_1_full_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861136",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/imp/impl_1_full_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861136",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/imp/impl_1_full_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861136",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/imp/impl_1_slr_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861137",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/imp/impl_1_kernel_util_placed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861137",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/imp/impl_1_kernel_util_synthed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861137",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/imp/impl_1_kernel_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861137",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/imp/impl_1_kernel_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861137",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/imp/impl_1_full_util_synthed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861137",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/imp/impl_1_full_util_placed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861162",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_psreset_gate_pr_kernel2_0_synth_1_ulp_psreset_gate_pr_kernel2_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861163",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_psreset_gate_pr_ddrmem_1_0_synth_1_ulp_psreset_gate_pr_ddrmem_1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861163",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_psreset_gate_pr_data_0_synth_1_ulp_psreset_gate_pr_data_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861163",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_psreset_gate_pr_control_0_synth_1_ulp_psreset_gate_pr_control_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861163",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_logic_reset_op_0_synth_1_ulp_logic_reset_op_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861163",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_regslice_data_static1_0_synth_1_ulp_regslice_data_static1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861164",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_regslice_data_static_0_synth_1_ulp_regslice_data_static_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861164",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_regslice_control_mgntpf_0_synth_1_ulp_regslice_control_mgntpf_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861164",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_freq_counter_0_0_synth_1_ulp_freq_counter_0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861164",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_axi_vip_data_static1_0_synth_1_ulp_axi_vip_data_static1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861164",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_axi_vip_data_static_0_synth_1_ulp_axi_vip_data_static_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861164",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_axi_vip_ctrl_userpf_0_synth_1_ulp_axi_vip_ctrl_userpf_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861164",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_axi_vip_ctrl_mgntpf_0_synth_1_ulp_axi_vip_ctrl_mgntpf_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861164",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_axi_gpio_null_0_synth_1_ulp_axi_gpio_null_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861164",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_axi_cdc_data_static1_0_synth_1_ulp_axi_cdc_data_static1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861165",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_axi_cdc_data_static_0_synth_1_ulp_axi_cdc_data_static_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861165",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_axi_protocol_convert_0_0_synth_1_ulp_axi_protocol_convert_0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861165",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_fpga_dna_module_0_0_synth_1_ulp_fpga_dna_module_0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861165",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_debug_bridge_xsdbm_0_synth_1_ulp_debug_bridge_xsdbm_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861165",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_user_debug_bridge_0_synth_1_ulp_user_debug_bridge_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861165",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_regslice_periph_null_0_synth_1_ulp_regslice_periph_null_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861165",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_psreset_ddrmem_n_1_0_synth_1_ulp_psreset_ddrmem_n_1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861165",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_ddrmem_1_0_synth_1_ulp_ddrmem_1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861165",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_ddr1_clk_ibufds_0_synth_1_ulp_ddr1_clk_ibufds_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861165",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_ddr1_clk_bufg_0_synth_1_ulp_ddr1_clk_bufg_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861166",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_axi_vip_0_0_synth_1_ulp_axi_vip_0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861166",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_axi_bram_ctrl_0_bram_0_synth_1_ulp_axi_bram_ctrl_0_bram_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861166",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_axi_bram_ctrl_0_0_synth_1_ulp_axi_bram_ctrl_0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861166",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_ii_level0_wire_0_synth_1_ulp_ii_level0_wire_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861166",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/bd_0349_xsdbm_0_synth_1_bd_0349_xsdbm_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861166",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/bd_0349_lut_buffer_0_synth_1_bd_0349_lut_buffer_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861166",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/bd_9997_bsip_0_synth_1_bd_9997_bsip_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861166",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/bd_9997_bs_switch_1_0_synth_1_bd_9997_bs_switch_1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861166",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/bd_9997_axi_jtag_0_synth_1_bd_9997_axi_jtag_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861166",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_xbar_2_synth_1_ulp_xbar_2_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861167",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_krnl_dummy_1_0_synth_1_ulp_krnl_dummy_1_0_utilization_synth.rpt",
+  "name": "krnl_dummy",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861167",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_xbar_5_synth_1_ulp_xbar_5_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861167",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_xbar_3_synth_1_ulp_xbar_3_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861167",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_auto_rs_w_0_synth_1_ulp_auto_rs_w_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861167",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_s03_regslice_0_synth_1_ulp_s03_regslice_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861167",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_s01_regslice_5_synth_1_ulp_s01_regslice_5_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861167",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_s00_regslice_21_synth_1_ulp_s00_regslice_21_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861167",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_auto_cc_2_synth_1_ulp_auto_cc_2_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861167",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_auto_us_0_synth_1_ulp_auto_us_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861167",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_auto_cc_0_synth_1_ulp_auto_cc_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861168",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_s03_mmu_0_synth_1_ulp_s03_mmu_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861168",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_xbar_6_synth_1_ulp_xbar_6_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861168",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_s00_regslice_20_synth_1_ulp_s00_regslice_20_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861168",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_s01_regslice_4_synth_1_ulp_s01_regslice_4_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861168",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_auto_us_cc_df_1_synth_1_ulp_auto_us_cc_df_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861168",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_m01_regslice_0_synth_1_ulp_m01_regslice_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861168",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_auto_cc_1_synth_1_ulp_auto_cc_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861168",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_m00_regslice_0_synth_1_ulp_m00_regslice_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861168",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/syn/ulp_s00_regslice_22_synth_1_ulp_s00_regslice_22_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861168",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/imp/impl_1_system_diagram.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": "3580ef88-67f8-46a1-87b3-7d977fd9b301"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861186",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "3580ef88-67f8-46a1-87b3-7d977fd9b301"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861191",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "3580ef88-67f8-46a1-87b3-7d977fd9b301"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861191",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpv",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_CONCISE",
+  "cmdId": "3580ef88-67f8-46a1-87b3-7d977fd9b301"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861200",
+ "status": {
+  "cmdId": "43813ed6-c978-46c5-9408-54fbe286cbde",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861207",
+ "status": {
+  "cmdId": "5a25c535-7614-4f28-8496-da67827771bc",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861208",
+ "buildStep": {
+  "cmdId": "ac8e64d9-ba68-4c21-9807-dc3a71e1e653",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "rtdgen",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/owner/Desktop/fpga_dram"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861208",
+ "status": {
+  "cmdId": "ac8e64d9-ba68-4c21-9807-dc3a71e1e653",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861208",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/link/int/krnl_dummy_xml.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "XCLBIN_INFO",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861209",
+ "buildStep": {
+  "cmdId": "3dd65d63-51b6-4ca1-ab00-e3903661b608",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -a /home/owner/Desktop/fpga_dram/_x/link/int/address_map.xml -sdsl /home/owner/Desktop/fpga_dram/_x/link/int/sdsl.dat -xclbin /home/owner/Desktop/fpga_dram/_x/link/int/xclbin_orig.xml -rtd /home/owner/Desktop/fpga_dram/_x/link/int/krnl_dummy.rtd -o /home/owner/Desktop/fpga_dram/_x/link/int/krnl_dummy.xml",
+  "args": [
+   "-a",
+   "/home/owner/Desktop/fpga_dram/_x/link/int/address_map.xml",
+   "-sdsl",
+   "/home/owner/Desktop/fpga_dram/_x/link/int/sdsl.dat",
+   "-xclbin",
+   "/home/owner/Desktop/fpga_dram/_x/link/int/xclbin_orig.xml",
+   "-rtd",
+   "/home/owner/Desktop/fpga_dram/_x/link/int/krnl_dummy.rtd",
+   "-o",
+   "/home/owner/Desktop/fpga_dram/_x/link/int/krnl_dummy.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/owner/Desktop/fpga_dram"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 17:57:41 2023",
+ "timestampMillis": "1702259861209",
+ "status": {
+  "cmdId": "3dd65d63-51b6-4ca1-ab00-e3903661b608",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 17:57:42 2023",
+ "timestampMillis": "1702259862458",
+ "status": {
+  "cmdId": "3dd65d63-51b6-4ca1-ab00-e3903661b608",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Dec 10 17:57:42 2023",
+ "timestampMillis": "1702259862459",
+ "buildStep": {
+  "cmdId": "dc2fa13c-be1b-4d32-a910-6577d432934c",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeSystemDiagram",
+  "args": [
+   "/home/owner/Desktop/fpga_dram/_x/link/int/krnl_dummy.rtd",
+   "/home/owner/Desktop/fpga_dram/_x/link/int/systemDiagramModelSlrBaseAddress.json"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/owner/Desktop/fpga_dram"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 17:57:42 2023",
+ "timestampMillis": "1702259862459",
+ "status": {
+  "cmdId": "dc2fa13c-be1b-4d32-a910-6577d432934c",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:42 2023",
+ "timestampMillis": "1702259862460",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/link/int/systemDiagramModelSlrBaseAddress.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 17:57:42 2023",
+ "timestampMillis": "1702259862460",
+ "status": {
+  "cmdId": "dc2fa13c-be1b-4d32-a910-6577d432934c",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Dec 10 17:57:42 2023",
+ "timestampMillis": "1702259862460",
+ "buildStep": {
+  "cmdId": "b9a0b270-339d-47d4-9b62-c5c7438478fe",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeAutomationSummary",
+  "args": [
+   "/home/owner/Desktop/fpga_dram/_x/link/int/automation_summary.txt"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/owner/Desktop/fpga_dram"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 17:57:42 2023",
+ "timestampMillis": "1702259862460",
+ "status": {
+  "cmdId": "b9a0b270-339d-47d4-9b62-c5c7438478fe",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:42 2023",
+ "timestampMillis": "1702259862460",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/link/int/automation_summary.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 17:57:42 2023",
+ "timestampMillis": "1702259862460",
+ "status": {
+  "cmdId": "b9a0b270-339d-47d4-9b62-c5c7438478fe",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 17:57:42 2023",
+ "timestampMillis": "1702259862461",
+ "status": {
+  "cmdId": "ac8e64d9-ba68-4c21-9807-dc3a71e1e653",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Dec 10 17:57:42 2023",
+ "timestampMillis": "1702259862461",
+ "buildStep": {
+  "cmdId": "1b3e8a90-e044-435d-bea1-0eb3bea56aa5",
+  "name": "xclbinutil",
+  "logFile": "",
+  "commandLine": "xclbinutil --add-section BITSTREAM:RAW:/home/owner/Desktop/fpga_dram/_x/link/int/partial.bit --force --target hw --key-value SYS:dfx_enable:true --add-section :JSON:/home/owner/Desktop/fpga_dram/_x/link/int/krnl_dummy.rtd --append-section :JSON:/home/owner/Desktop/fpga_dram/_x/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/owner/Desktop/fpga_dram/_x/link/int/krnl_dummy_xml.rtd --add-section BUILD_METADATA:JSON:/home/owner/Desktop/fpga_dram/_x/link/int/krnl_dummy_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/owner/Desktop/fpga_dram/_x/link/int/krnl_dummy.xml --add-section SYSTEM_METADATA:RAW:/home/owner/Desktop/fpga_dram/_x/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_u2_gen3x4_xdma_gc_2_202110_1 --output /home/owner/Desktop/fpga_dram/xclbin/krnl_dummy.xclbin",
+  "args": [
+   "--add-section",
+   "BITSTREAM:RAW:/home/owner/Desktop/fpga_dram/_x/link/int/partial.bit",
+   "--force",
+   "--target",
+   "hw",
+   "--key-value",
+   "SYS:dfx_enable:true",
+   "--add-section",
+   ":JSON:/home/owner/Desktop/fpga_dram/_x/link/int/krnl_dummy.rtd",
+   "--append-section",
+   ":JSON:/home/owner/Desktop/fpga_dram/_x/link/int/appendSection.rtd",
+   "--add-section",
+   "CLOCK_FREQ_TOPOLOGY:JSON:/home/owner/Desktop/fpga_dram/_x/link/int/krnl_dummy_xml.rtd",
+   "--add-section",
+   "BUILD_METADATA:JSON:/home/owner/Desktop/fpga_dram/_x/link/int/krnl_dummy_build.rtd",
+   "--add-section",
+   "EMBEDDED_METADATA:RAW:/home/owner/Desktop/fpga_dram/_x/link/int/krnl_dummy.xml",
+   "--add-section",
+   "SYSTEM_METADATA:RAW:/home/owner/Desktop/fpga_dram/_x/link/int/systemDiagramModelSlrBaseAddress.json",
+   "--key-value",
+   "SYS:PlatformVBNV:xilinx_u2_gen3x4_xdma_gc_2_202110_1",
+   "--output",
+   "/home/owner/Desktop/fpga_dram/xclbin/krnl_dummy.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/owner/Desktop/fpga_dram"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 17:57:42 2023",
+ "timestampMillis": "1702259862461",
+ "status": {
+  "cmdId": "1b3e8a90-e044-435d-bea1-0eb3bea56aa5",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 17:57:42 2023",
+ "timestampMillis": "1702259862518",
+ "status": {
+  "cmdId": "1b3e8a90-e044-435d-bea1-0eb3bea56aa5",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Dec 10 17:57:42 2023",
+ "timestampMillis": "1702259862519",
+ "buildStep": {
+  "cmdId": "84441b47-7d9f-4b79-b6d5-08beb27c278b",
+  "name": "xclbinutilinfo",
+  "logFile": "",
+  "commandLine": "xclbinutil --quiet --force --info /home/owner/Desktop/fpga_dram/xclbin/krnl_dummy.xclbin.info --input /home/owner/Desktop/fpga_dram/xclbin/krnl_dummy.xclbin",
+  "args": [
+   "--quiet",
+   "--force",
+   "--info",
+   "/home/owner/Desktop/fpga_dram/xclbin/krnl_dummy.xclbin.info",
+   "--input",
+   "/home/owner/Desktop/fpga_dram/xclbin/krnl_dummy.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/owner/Desktop/fpga_dram"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 17:57:42 2023",
+ "timestampMillis": "1702259862519",
+ "status": {
+  "cmdId": "84441b47-7d9f-4b79-b6d5-08beb27c278b",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 17:57:42 2023",
+ "timestampMillis": "1702259862676",
+ "status": {
+  "cmdId": "84441b47-7d9f-4b79-b6d5-08beb27c278b",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Dec 10 17:57:42 2023",
+ "timestampMillis": "1702259862677",
+ "buildStep": {
+  "cmdId": "60035637-136e-4758-9632-599a3aeb037e",
+  "name": "generate_sc_driver",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/owner/Desktop/fpga_dram"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 17:57:42 2023",
+ "timestampMillis": "1702259862677",
+ "status": {
+  "cmdId": "60035637-136e-4758-9632-599a3aeb037e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 17:57:42 2023",
+ "timestampMillis": "1702259862677",
+ "status": {
+  "cmdId": "60035637-136e-4758-9632-599a3aeb037e",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:42 2023",
+ "timestampMillis": "1702259862679",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/system_estimate_krnl_dummy.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:42 2023",
+ "timestampMillis": "1702259862681",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 10 17:57:42 2023",
+ "timestampMillis": "1702259862681",
+ "status": {
+  "cmdId": "4d45421d-5aeb-48a0-9f75-d1f6d2b892cd",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:42 2023",
+ "timestampMillis": "1702259862712",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/reports/link/v++_link_krnl_dummy_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 10 17:57:42 2023",
+ "timestampMillis": "1702259862712",
+ "report": {
+  "path": "/home/owner/Desktop/fpga_dram/_x/v++_link_krnl_dummy_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
